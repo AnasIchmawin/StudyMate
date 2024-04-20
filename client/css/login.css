@@ -1,106 +1,75 @@
-body {
-    background-color: #EBD9B3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    flex-direction: column;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #ececec;
+}
+/*------------ Login container ------------*/
+.box-area{
+    width: 800px; height: calc(100vh - 50px);
+}
+/*------------ Right box ------------*/
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+/*------------ Custom Placeholder ------------*/
+::placeholder{
+    font-size: 16px;
+}
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+/*------------ For small screens------------*/
+@media only screen and (max-width: 768px){
+     .box-area{
+        margin: 0 10px;
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
 }
 
-.quarter-circle.left-bottom {
-    background-color: #737373;
-    width: 230px;
-    /* largeur */
-    height: 230px;
-    /* hauteur */
-    border-radius: 0 230px 0 0;
-    /* définit le quart de cercle */
-    position: absolute;
-    /* positionnement absolu */
-    bottom: 0;
-    left: 0;
-}
-
-
-.quarter-circle.right-top {
-    background-color: #737373;
-    width: 230px;
-    /* largeur */
-    height: 230px;
-    /* hauteur */
-    border-radius: 0 0 0 230px;
-    /* définit le quart de cercle */
-    position: absolute;
-    /* positionnement absolu */
-    right: 0;
+.bluescreen{
+    background: #18283b;
+    color: #fff;
+    position:absolute;
     top: 0;
-}
-
-.container {
-    background-image: linear-gradient(to top, #FFFFFF, #999999);
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    position: relative;
-    overflow: hidden;
-    width: 770px;
-    max-width: 100%;
-    min-height: 480px;
-}
-
-.container p {
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.3px;
-    margin: -10px 0;
-}
-
-.container a {
-    color: #333;
-    text-decoration: none;
-    font-size: 13px;
-    margin: 15px 0 10px;
-}
-
-.container button {
-    background-color: transparent;
-    border: 1px solid #000000;
-    border-radius: 13px;
-    color: #000000;
-    font-size: 12px;
-    padding: 10px 30px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.container button.hidden {
-    background-color: transparent;
-    border-color: transparent;
-    color: transparent;
-}
-
-.container form {
-    background-color: linear-gradient(to top, #FFFFFF, #999999);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
+    left: 0;
+    width: 50%;
     height: 100%;
-}
-
-.container input {
-    background-color: #000000;
-    border: none;
-    border-radius: 13px;
-    color: #FFFFFF;
-    font-size: 14px;
-    padding: 10px 15px;
-    outline: none;
-    width: 100%;
+    z-index: 2;
+    border-radius: 20px;
+    transition: 0.5s ease;
 }
 
 
+.translate-right {
+    transform: translateX(100%);
+}
 
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    /* centrer */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* transparence  */
+    
+   
+}
+
+.register-btn ,.login-btn{
+    background-color: #18283b;
+    color: white
+}
