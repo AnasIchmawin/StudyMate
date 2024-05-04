@@ -23,7 +23,7 @@ body {
         font-weight: 700;
         margin-bottom: 20px;
         color: #18283b;
-        width: 60%;
+        width: 75%;
     }
 }
 
@@ -470,21 +470,63 @@ label[for=nav-footer-toggle] {
     /* margin-top: 20px; */
     display: grid;
     grid-gap: 20px;
+    border-bottom: 1px solid #000000;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.tasks-checked {
+    /* margin-top: 20px; */
+    display: grid;
+    grid-gap: 20px;
     /* border-top: 1px solid #000000; */
     padding-top: 10px;
+
+}
+
+
+.task {
+    transition: transform 0.3s ease;
+}
+
+.checked {
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    opacity: 0;
 }
 
 .head {
     display : flex;
 }
 
+.discript1 {
+    font-size: 20px;
+}
+
 .task {
     /* align-items: center; */
     padding: 5px;
-    background-color: #07689F;
+    background-color: #59afe1;
     border-radius: 10px;
     display: flex;
     align-items: center;
+    transition: background-color 0.3s, transform 0.3s; /* Apply transition for background color and transform */
+}
+
+.task:hover {
+    background-color: #1e9ae1;
+}
+
+.task:hover {
+    transform: scale(1.02);
+}
+
+.checked {
+    background-color: #de7e6d;
+}
+
+.checked:hover {
+    background-color: #d45b45;
 }
 
 .headtask {
@@ -497,6 +539,15 @@ label[for=nav-footer-toggle] {
 
 .buttons {
     display: flex;
+    justify-content: space-between;
+}
+
+.div1 {
+    display: flex;
+}
+
+.div2 {
+    margin-left: 20px;
 }
 
 .buttons button {
@@ -504,6 +555,9 @@ label[for=nav-footer-toggle] {
     border-radius: 10px;
     cursor: pointer;
     height: 40px;
+    width: 120px;
+    background-color: #1583c3;
+    font-weight: bold;
 }
 
 .buttons input {
@@ -511,6 +565,7 @@ label[for=nav-footer-toggle] {
     border-radius: 10px;
     cursor: pointer;
     height: 40px;
+    width: 250px;
 }
 
 .task label {
