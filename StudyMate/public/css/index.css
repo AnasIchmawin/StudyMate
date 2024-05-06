@@ -1,0 +1,214 @@
+*{
+    font-family: montserrat;
+    
+}
+body{
+    background-color: #FAFAFA;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+.section-padding{
+    padding: 100px 0;
+}
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+}
+.carousel-caption{
+    bottom: 220px;
+    z-index: 2;
+}
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+.carousel-caption p{
+    font-size: 18px;
+    width: 60%;
+    margin: auto;
+    line-height: 1.9;
+}
+
+
+.navbar a{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+    
+.navbar-light .navbar-brand{
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover{
+    color: #000;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #000;
+}
+
+.w-100{
+    width: 100vh;
+}
+
+.pd{
+    padding-top: 45px;
+}
+
+.services .card-body i{
+    font-size: 50px;
+    }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
+    grid-auto-rows: minmax(100px, auto); /* Hauteur automatique avec un minimum de 100px */
+    grid-gap: 10px;
+    }
+
+.grid-item {
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;}
+
+footer *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+footer{
+    background-color: #111;
+    color: #fff;
+    padding: 70px 0 0px;
+}
+
+.footer-container{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 6%;
+}
+
+.social-icons a i{
+    font-size: 2em;
+    color: #111;
+    opacity: 0.9;
+}
+
+/* hover effect on social media icons*/
+
+.social-icons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+.forum{
+    background-color: #111;
+    padding: 20px;
+    border-radius: 12px;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+/* responsive */
+
+@media only screen and (max-width: 767px){
+    .navbar-nav{
+        text-align: center;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        bottom: 50%;
+    }
+    .carousel-caption{
+        bottom: 65%;
+    }
+    .carousel-caption h5{
+        font-size: 15px;
+    }
+    .carousel-caption p{
+        width: 100%;
+        line-height: 1.6;
+        font-size: 12px;
+    }
+}
