@@ -19,4 +19,4 @@ Route::get('/modules/{id}', [ModuleController::class, 'show'])->name('modules.sh
 
 // Route to show the form to add a new document to a module
 Route::get('/modules/{id}/documents/create', [DocumentController::class, 'create'])->name('documents.create');
-Route::post('/modules/{id}/documents', [DocumentController::class, 'store'])->name('documents.store');
+Route::post('/modules/{id}', [DocumentController::class, 'store'])->name('documents.store');

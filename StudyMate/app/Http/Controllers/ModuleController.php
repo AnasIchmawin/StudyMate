@@ -29,9 +29,10 @@ class moduleController extends Controller
 
         return redirect()->route('modules.index');
     }
+    
     public function show($id)
     {
-        $module = Module::all()->where('id', $id);
+        $module = Module::find($id);
         $documents = Document::all()->where('module_id', $id);
         return view("layouts.document", compact('module', 'documents'));
     }

@@ -13,15 +13,15 @@
 <body>
     <div class="row register-form" style="margin-top: 250px;">
         <div class="col-md-8 offset-md-2">
-            <form action="{{ route('modules.store') }}" method="POST" class="custom-form">
+            <form action="{{ route('documents.store'),['id' => $id]}}" method="POST" class="custom-form">
                 @csrf
-                <h1>Add Module</h1>
+                <h1>Add Document</h1>
                 <div class="row form-group">
                     <div class="col-sm-4 label-column">
-                        <label class="col-form-label" for="name-input-field">Module Name</label>
+                        <label class="col-form-label" for="name-input-field">Select Document</label>
                     </div>
                     <div class="col-sm-6 input-column">
-                        <input class="form-control" type="text" name="module" id="module">
+                        <input type="file" name="file" style="background-color: white;">
                     </div>
                 </div>
                 <button class="btn btn-light submit-button" type="submit">Add Module</button>
