@@ -17,6 +17,27 @@ body {
     background-color: white;
 }
 
+.containerNav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 200px;
+
+    .btn {
+        height: 40px;
+        width: 150px;
+        background-color: #f1f1f3;
+        color: #000000b2;
+        border-radius: 12em;
+        margin-bottom: 30px;
+    }
+
+    .btn:hover {
+        background-color: #dadada;
+    }
+}
+
 #mainContainer {
     .titlePage {
         font-size: 40px;
