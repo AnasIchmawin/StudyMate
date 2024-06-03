@@ -34,6 +34,6 @@ class moduleController extends Controller
     {
         $module = Module::find($id);
         $documents = Document::all()->where('module_id', $id);
-        return view("layouts.document", compact('module', 'documents'));
+        return view("layouts.document", compact('module', 'documents','id'));
     }
 }

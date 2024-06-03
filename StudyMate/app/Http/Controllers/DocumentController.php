@@ -4,30 +4,47 @@ namespace App\Http\Controllers;
 
 use App\Models\Document;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class DocumentController extends Controller
 {
-    function create()
+    function create($id)
     {
-        return view("layouts/AddDocument");
+        return view("layouts/AddDocument", compact('id'));
     }
 
     public function store(Request $request, $id)
     {
-        $request->validate([
-            'document_file' => 'required|file|mimes:pdf,doc,docx|max:2048',
-        ]);
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
 
-        if ($request->hasFile('document_file')) {
-            $file = $request->file('document_file');
-            $path = $file->store('documents', 'public');
+            // Validate filename (example using Laravel validation)
+            $validator = Validator::make($request->all(), [
+                'file' => 'required|file|max:2048|mimes:pdf,docx,xlsx'
+            ]);
+
+            if ($validator->fails()) {
+                // Handle validation errors and redirect back to form
+                return redirect()->back()->withErrors($validator);
+            }
+
+            // Generate a unique filename (optional)
+            $filename = uniqid() . '.' . $file->getClientOriginalExtension();
+
+            $path = $file->storeAs('documents', $filename, 'public');
+
+            if (!$path) {
+                // Handle storage error and redirect back to form
+                return redirect()->back()->withErrors(['upload_error' => 'Failed to upload file.']);
+            }
 
             $document = new Document();
-            $document->path = $path;
-            $document->module_id = $id; // Assign the module ID to the document
+            $document->path = $path; // Assuming path is the full path or URL
+            $document->module_id = $id;
             $document->save();
         }
 
         return redirect()->route('modules.show', ['id' => $id]);
     }
+
 }

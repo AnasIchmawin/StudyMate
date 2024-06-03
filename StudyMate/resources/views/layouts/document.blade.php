@@ -26,7 +26,7 @@
             </div>
         </section>
         <div class="containerNav">
-            <a href="{{ route('documents.create'), }}" class="btn" style="width:250px;">Ajouter Documents</a>
+            <a href="{{ route('documents.create',['id' => $id])}}" class="btn" style="width:250px;">Ajouter Documents</a>
         </div>
         <div id="modules">
             @foreach($documents as $doc)

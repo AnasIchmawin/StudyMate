@@ -13,7 +13,7 @@
 <body>
     <div class="row register-form" style="margin-top: 250px;">
         <div class="col-md-8 offset-md-2">
-            <form action="{{ route('documents.store'),['id' => $id]}}" method="POST" class="custom-form">
+            <form action="{{ route('documents.store',['id' => $id])}}" method="POST" class="custom-form">
                 @csrf
                 <h1>Add Document</h1>
                 <div class="row form-group">
