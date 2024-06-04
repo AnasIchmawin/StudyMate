@@ -30,16 +30,6 @@
         </div>
         <div id="modules">
             @foreach($documents as $doc)
-            <!-- <div class="card">
-                <h3 class="card__title">{{ $doc->module_id }}</h3>
-                <div class="card__date">{{ $doc->path }}</div>
-            </div> -->
-
-            @endforeach
-
-        </div>
-        <div id="modules">
-            @foreach($documents as $doc)
             <div class="card">
                 <a href="{{ url($doc->path) }}" class="card__content">
                     <h3 class="card__title">{{ $doc->module_id }}</h3>
