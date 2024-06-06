@@ -2,12 +2,30 @@
 
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\ModuleController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('layouts/index');
 });
+
+
+Route::get('/timetable', [EventController::class, 'index'])->name('timetable.index');
+
+
+
+// Route::resource('events', EventController::class);
+
+Route::get('/events', [EventController::class, 'index'])->name('events.index');
+// Route to show the form to add a new module
+Route::get('/events/create', [EventController::class, 'create'])->name('events.create');
+Route::post('/events', [EventController::class, 'store'])->name('events.store');
+// Route to show all documents within a module with a button to add a new document
+Route::get('/events/{id}', [EventController::class, 'show'])->name('events.show');
+
+
+
 
 // Route to show all modules with a button to add a new module
 Route::get('/modules', [ModuleController::class, 'index'])->name('modules.index');
