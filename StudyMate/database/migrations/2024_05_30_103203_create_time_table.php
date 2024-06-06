@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // Schema::create('documents', function (Blueprint $table) {
-        //     $table->id();
-        //     $table->foreignId('module_id')->constrained()->onDelete('cascade');
-        //     $table->text('path');
-        //     $table->timestamps();
-        // });
+        Schema::create('events', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('day');
+            $table->string('hour');
+            $table->string('type');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('documents');
+        Schema::dropIfExists('event');
     }
 };
