@@ -26,22 +26,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">HOME</a>
+                        <a class="nav-link" href="#carouselExampCaptions">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">SERVICES</a>
+                        <a class="nav-link" href="#services">SERVICES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ABOUT</a>
+                        <a class="nav-link" href="#about">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">TEAM</a>
+                        <a class="nav-link" href="#team">TEAM</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT</a>
+                        <a class="nav-link" href="#contact">CONTACT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">SE CONNECTER</a>
+                        <a class="nav-link" href="login">SE CONNECTER</a>
                     </li>
                 </ul>
             </div>
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('img/Study_tips.png') }}" class="d-block w-100" alt="Logo">
+                <img src="{{ asset('img/image.png') }}" class="d-block w-100" alt="Logo">
 
                 <div class="carousel-caption">
                     <h5>Second slide label</h5>
@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('img/Study_tips.png') }}" class="d-block w-100" alt="Logo">
+                <img src="{{ asset('img/image2.png') }}" class="d-block w-100" alt="Logo">
 
                 <div class="carousel-caption">
                     <h5>Third slide label</h5>
@@ -202,9 +202,9 @@
                 <div class="col-md-12 col-12 col-lg-4">
                     <div class="card text-white text-center bg-dark pb-2">
                         <div class="card-body">
-                            <img src="{{ asset('img/Study_tips.png') }}" class="img-fluid rounded-circle w-50" alt="Logo">
+                            <img src="{{ asset('hna/ali.jpeg') }}" class="img-fluid rounded-circle w-50" alt="Logo">
 
-                            <h3 class="card-title">Best Quality</h3>
+                            <h3 class="card-title">Ali Harit</h3>
                             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eligendi
                                 dignissimos enim libero nemo error eveniet laudantium animi. Dolore eius recusandae ut,
                                 magnam dignissimos temporibus!</p>
@@ -215,9 +215,9 @@
                 <div class="col-md-12 col-12 col-lg-4">
                     <div class="card text-white text-center bg-dark pb-2">
                         <div class="card-body">
-                            <img src="{{ asset('img/Study_tips.png') }}" class="img-fluid rounded-circle w-50" alt="Logo">
+                            <img src="{{ asset('hna/mourad.jpeg') }}" class="img-fluid rounded-circle w-50" alt="Logo">
 
-                            <h3 class="card-title">Best Quality</h3>
+                            <h3 class="card-title">Mourad Imani</h3>
                             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eligendi
                                 dignissimos enim libero nemo error eveniet laudantium animi. Dolore eius recusandae ut,
                                 magnam dignissimos temporibus!</p>
@@ -228,8 +228,8 @@
                 <div class="col-md-12 col-12 col-lg-4">
                     <div class="card text-white text-center bg-dark pb-2">
                         <div class="card-body">
-                            <img src="img/Study_tips.png" alt="team" class="img-fluid rounded-circle w-50">
-                            <h3 class="card-title">Best Quality</h3>
+                            <img src="hna/anas.jpg" alt="team" class="img-fluid rounded-circle w-50">
+                            <h3 class="card-title">Anas Ichmawin</h3>
                             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eligendi
                                 dignissimos enim libero nemo error eveniet laudantium animi. Dolore eius recusandae ut,
                                 magnam dignissimos temporibus!</p>
@@ -244,9 +244,9 @@
                 <div class="col-md-12 col-12 col-lg-4">
                     <div class="card text-white text-center bg-dark pb-2">
                         <div class="card-body">
-                            <img src="{{ asset('img/Study_tips.png') }}" class="img-fluid rounded-circle w-50" alt="Logo">
+                            <img src="{{ asset('hna/med-amine.jpg') }}" class="img-fluid rounded-circle w-50" alt="Logo">
 
-                            <h3 class="card-title">Best Quality</h3>
+                            <h3 class="card-title">Amine Fatih</h3>
                             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eligendi
                                 dignissimos enim libero nemo error eveniet laudantium animi. Dolore eius recusandae ut,
                                 magnam dignissimos temporibus!</p>
@@ -257,8 +257,8 @@
                 <div class="col-md-12 col-12 col-lg-4">
                     <div class="card text-white text-center bg-dark pb-2">
                         <div class="card-body">
-                            <img src="{{ asset('img/Study_tips.png') }}" class="img-fluid rounded-circle w-50" alt="Logo">
-                            <h3 class="card-title">Best Quality</h3>
+                            <img src="{{ asset('hna/souhail.png') }}" class="img-fluid rounded-circle w-50" alt="Logo">
+                            <h3 class="card-title">Souhail Mossalim</h3>
                             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eligendi
                                 dignissimos enim libero nemo error eveniet laudantium animi. Dolore eius recusandae ut,
                                 magnam dignissimos temporibus!</p>
@@ -335,11 +335,6 @@
             <p>Copyright &copy;2024; Designed by <span class="designer">StudyMate Team</span></p>
         </div>
     </footer>
-
-
-
-
-
     <br><br><br>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
