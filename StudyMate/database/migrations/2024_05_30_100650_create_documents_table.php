@@ -14,7 +14,7 @@ return new class extends Migration
         // Schema::create('documents', function (Blueprint $table) {
         //     $table->id();
         //     $table->foreignId('module_id')->constrained()->onDelete('cascade');
-        //     $table->text('path');
+        //     $table->string('path');
         //     $table->timestamps();
         // });
     }

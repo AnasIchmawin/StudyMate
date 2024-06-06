@@ -18,12 +18,21 @@
                 <h1>Add Document</h1>
                 <div class="row form-group">
                     <div class="col-sm-4 label-column">
-                        <label class="col-form-label" for="name-input-field">Select Document</label>
+                        <label class="col-form-label" for="name-input-field">Name Document</label>
                     </div>
                     <div class="col-sm-6 input-column">
-                        <input type="file" name="file" style="background-color: white;">
+                        <input class="form-control" type="name" name="name" style="background-color: white;">
                     </div>
                 </div>
+                <div class="row form-group">
+                    <div class="col-sm-4 label-column">
+                        <label class="col-form-label" for="name-input-field">Path Documents</label>
+                    </div>
+                    <div class="col-sm-6 input-column">
+                        <input class="form-control" type="path" name="path" style="background-color: white;">
+                    </div>
+                </div>
+                <input type="hidden" name="module_id" value="{{$id}}" style="background-color: white;">
                 <button class="btn btn-light submit-button" type="submit">Add Module</button>
             </form>
         </div>
