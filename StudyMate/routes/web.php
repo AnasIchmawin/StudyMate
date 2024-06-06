@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\ModuleController;
 use Illuminate\Support\Facades\Route;
@@ -8,7 +9,31 @@ Route::get('/', function () {
     return view('layouts/index');
 });
 
+
+// Route pour afficher le formulaire de login
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+
+// Route pour traiter la soumission du formulaire de login
+Route::post('login', [LoginController::class, 'getDataFromLogin'])->name('login.post');
+
+// Route pour afficher le formulaire d'inscription
+ Route::get('register', [LoginController::class, 'showRegisterForm'])->name('register');
+
+//  Route pour traiter la soumission du formulaire d'inscription
+ Route::post('register', [LoginController::class, 'getDataFromRegister'])->name('register.post');
+
+
+
+
+
+
+
+
+
+
+
 Route::get('/modules', [ModuleController::class, 'index'])->name('modules.index');
+
 
 // Route to show the form to add a new module
 Route::get('/modules/create', [ModuleController::class, 'create'])->name('modules.create');
