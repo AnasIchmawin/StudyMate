@@ -31,6 +31,7 @@ body {
     padding: 40px;
     border-radius: 10px;
     position: absolute;
+    width: calc(100% - var(--navbar-width-min));
     top: 0;
     left: 82px;
     background-color: #fff;
@@ -676,5 +677,21 @@ label[for=nav-footer-toggle] {
     color: #000000;
     text-align: center;
     line-height: 30px;
+}
+
+.btn {
+    height: 40px;
+    width: 150px;
+    background-color: #1583c3;
+    color: #000000b2;
+    font-weight: bold;
+    border-radius: 12em;
+    margin-bottom: 30px;
+    margin-left: 0.1em;
+    margin-right: 2em;
+}
+
+.btn:hover {
+    background-color: #106799;
 }
 

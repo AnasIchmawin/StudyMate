@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('documents', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('module_id')->constrained()->onDelete('cascade');
-            $table->text('path');
-            $table->timestamps();
-        });
+        // Schema::create('documents', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->foreignId('module_id')->constrained()->onDelete('cascade');
+        //     $table->text('path');
+        //     $table->timestamps();
+        // });
     }
 
     /**
