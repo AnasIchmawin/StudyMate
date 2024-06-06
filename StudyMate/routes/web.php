@@ -3,6 +3,8 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\ModuleController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -45,3 +47,17 @@ Route::get('/modules/{id}', [ModuleController::class, 'show'])->name('modules.sh
 // Route to show the form to add a new document to a module
 Route::get('/modules/{id}/documents/create', [DocumentController::class, 'create'])->name('documents.create');
 Route::post('/modules/{id}/documents', [DocumentController::class, 'store'])->name('documents.store');
+
+
+// Route to show all tasks with a button to add a new task
+Route::get('/tasks', [TaskController::class, 'index'])->name('tasks.index');
+
+//task.create
+Route::get('/tasks/create', [TaskController::class, 'create'])->name('task.create');
+Route::post('/tasks', [TaskController::class, 'store'])->name('tasks.store');
+
+Route::get('/search', [TaskController::class, 'SearchTask']);
+
+
+
+
