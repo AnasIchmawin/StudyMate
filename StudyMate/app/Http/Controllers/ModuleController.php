@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Document;
 use App\Models\Module;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class moduleController extends Controller
 {
@@ -24,6 +25,8 @@ class moduleController extends Controller
         $request->validate([
             'module' => 'required|max:255',
         ]);
+
+        Log::info('Request data: ' . json_encode($request->all()));
 
         Module::create($request->all());
 
