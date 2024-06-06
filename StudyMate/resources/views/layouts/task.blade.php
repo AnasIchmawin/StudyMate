@@ -53,7 +53,7 @@
         <div class="head">
             <div class="titlePage">Tasks</div>
             <div class="buttons">
-                <a href="{{ route('task.create') }}" class="btn btn-outline-secondary">Ajouter Task</a>
+                <a href="{{ route('task.create') }}" class="btn">Ajouter Task</a>
                 <form action="/search" method="get">
                     <div class="input-group mb-3">
                         <input type="search" name="task" class="search form-control" placeholder="Recherche">
@@ -99,6 +99,8 @@
                     <div class="part5">
                         <label for="task1">{{ $task->description }}</label>
                     </div>
+                    <!-- delete -->
+                    <a href="/delete/{{ $task->id }}" class="btn btn-primary">Delete</a>
                 </div>
             @endif
             @endforeach

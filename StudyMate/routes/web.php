@@ -51,5 +51,9 @@ Route::post('/tasks', [TaskController::class, 'store'])->name('tasks.store');
 
 Route::get('/search', [TaskController::class, 'SearchTask']);
 
+Route::post('/update-task/{id}', [TaskController::class, 'updateTaskStatus'])->name('updateTaskStatus');
+
+Route::get('/delete-task/{id}', [TaskController::class, 'deleteTask'])->name('deleteTask');
+
 
 

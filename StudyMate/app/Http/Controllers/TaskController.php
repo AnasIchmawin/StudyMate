@@ -39,9 +39,31 @@ class TaskController extends Controller
 
     public function SearchTask(Request $request)
     {
-        $search = $request->get('search');
+        $search = $request->get('task');
         $tasks = Task::where('task', 'like', '%' . $search . '%')->get();
         return view('layouts.task', compact('tasks'));
     }
+
+    public function updateTaskStatus(Request $request, $id)
+    {
+        $request->validate([
+            'checked' => 'required|boolean',
+        ]);
+
+        $task = Task::findOrFail($id);
+        $task->checked = $request->input('checked');
+        $task->save();
+
+        return response()->json(['message' => 'Task status updated successfully']);
+    }
+
+    public function deleteTask($id)
+    {
+        $task = Task::find($id);
+        $task->delete();
+
+        return redirect()->route('tasks.index');
+    }
+
 
 }

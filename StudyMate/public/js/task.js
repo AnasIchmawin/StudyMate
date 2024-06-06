@@ -4,6 +4,34 @@ document.addEventListener('DOMContentLoaded', function() {
     tasks.forEach(task => {
         const checkbox = task.querySelector('input[type="checkbox"]');
         checkbox.addEventListener('change', function() {
+            // Get the task ID
+            const taskId = task.dataset.id;
+
+            // Determine the checked status
+            const checked = checkbox.checked ? 1 : 0;
+
+            // Send an AJAX request to update the task status
+            fetch('/update-task/' + taskId, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content') // Add CSRF token
+                },
+                body: JSON.stringify({
+                    checked: checked
+                })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                // Task status updated successfully
+            })
+            .catch(error => {
+                console.error('There was a problem updating the task status:', error);
+            });
+
+            // Handle visual changes
             if (checkbox.checked) {
                 task.style.transform = 'scale(0)';
                 task.style.opacity = '0';
