@@ -8,7 +8,7 @@
 
 | Realisé par: | Encadré par: |
 |--------------|--------------|
-| - IMANI Mourad | - EL BANNAY |
+| - IMANI Mourad | - EL BANNAY Omar |
 | - ICHMAWIN Anas | |
 | - HARIT Ali | |
 | - FATIH Mohamed-Amine | |
